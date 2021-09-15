@@ -1,0 +1,51 @@
+.review {
+    &__title {
+        font-weight: 700;
+        font-size: 43px;
+        line-height: 53px;
+        text-align: center;
+        color: $black;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    &__info {
+        font-size: 20px;
+        line-height: 33px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 30px;
+    }
+
+    &__info-link {
+        color: $purple;
+        
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .review {
+        &__title {
+            font-size: 34px;
+            line-height: 38px;
+        }
+
+        &__info {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .review {
+        &__slider-container {
+            padding: 0;
+        }
+    }
+}
+
+

@@ -1,0 +1,102 @@
+.main-box {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/main-img-center.png) ;
+        background-position-x: 65%;
+        background-position-y: 100%;
+        background-repeat: no-repeat;
+        padding-top: 102px;
+        padding-bottom: 224px;
+    }
+
+    &__title {
+        max-width: 672px;
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 67px;
+        text-align: center;
+        color: $black;
+        padding-bottom: 32px;
+    }
+
+    &__info {
+        padding-bottom: 23px;
+    }
+
+    &__info,
+    &__link {
+        max-width: 491px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        color: $black;
+    }
+
+    &__link {
+        color: $purple;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__button {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 20px;
+        padding: 15px 40px;
+        border-radius: 24px;
+    }
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .main-box {
+        &__container {
+            background-image: url(../img/main-img-center@2x.png);
+            background-size: 350px 254px;
+            background-position-x: 65%;
+            background-position-y: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main-box {
+        &__container {
+            background-position: center bottom;
+            background-size: auto 200px;
+            padding-top: 62px;
+            padding-bottom: 164px;
+        }
+
+        &__title {
+            max-width: 472px;
+            font-size: 36px;
+            line-height: 47px;
+        }
+
+        &__info,
+        &__link {
+            max-width: 395px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-box {
+        &__title {
+            max-width: 295px;
+        }
+
+        &__info,
+        &__link {
+            max-width: 255px;
+        }
+    }
+}

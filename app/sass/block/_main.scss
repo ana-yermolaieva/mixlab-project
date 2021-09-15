@@ -1,0 +1,129 @@
+.main {
+    &__main-box {
+        background: url(../img/main-img-left.png) left top, url(../img/main-img-right.png) top right, $beige;
+        background-repeat: no-repeat;
+    }
+
+    &__skills {
+        background-color: $white;
+        padding-top: 60px;
+        padding-bottom: 45px;
+    }
+
+    &__instruction {
+        background-color: $beige-light;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__partner {
+        background-color: $purple-bg;
+    }
+
+    &__review {
+        background-color: $white;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 202px;
+            height: 203px;
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            background-image: url(../img/review-hearts.png);
+            z-index: 1;
+        }
+    }
+
+    &__wild {
+        padding-top: 60px;
+        background-color: $beige-light;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-repeat: no-repeat;
+        }
+
+        &::before {
+            width: 120px;
+            height: 277px;
+            left: 0;
+            top: 300px;
+            background-image: url(../img/wild-img-left.png);
+        }
+
+        &::after {
+            width: 140px;
+            height: 220px;
+            right: 0;
+            top: 435px;
+            background-image: url(../img/wild-img-right.png);
+        }
+    }
+
+    &__member {
+        background-color: $purple;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .main {
+        &__main-box {
+            background-image: url(../img/main-img-left@2x.png) left top, url(../img/main-img-right@2x.png) 2x;
+        }
+
+        &__review {
+            &::before {
+                background-image: url(../img/review-hearts@2x.png);
+                background-size: 202px 203px;
+            }
+        }
+
+        &__wild {
+            &::before {
+                background-image: url(../img/wild-img-left@2x.png);
+                background-size: 120px 277px;
+            }
+
+            &::after {
+                background-image: url(../img/wild-img-right@2x.png);
+                background-size: 140px 220px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .main {
+        &__review {
+            &::before {
+               display: none;
+            }
+        }
+
+        &__wild {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        &__main-box {
+            background: $beige;
+        }
+    }
+}

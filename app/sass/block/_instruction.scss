@@ -1,0 +1,168 @@
+.instruction {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__title {
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 53px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 50px;
+    }
+
+    &__box {
+        display: flex;
+        margin: 0 -16px 65px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 15px;
+        
+        &::before {
+            content: '';
+            display: inline-flex;
+            align-self: center;
+            width: 224px;
+            height: 221px;
+            background-repeat: no-repeat;
+            position: absolute;
+        }
+
+        &--bg-parrot::before {
+            background-image: url(../img/instruction-parrot.png);
+            top: 46px;
+        }
+
+        &--bg-bunny::before {
+            background-image: url(../img/instruction-bunny.png);
+            top: 59px;
+        }
+
+        &--bg-dog::before {
+            background-image: url(../img/instruction-dog.png);
+            top: 0;
+        }
+    }
+
+    &__item-outer {
+        width: 33.333%;
+        padding: 0 16px;
+    }
+
+    &__item-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        color: $purple;
+        padding-bottom: 8px;
+    }
+
+    &__item-info {
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        color: $black;
+    }
+
+    &__button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+        padding: 15px 43px;
+        border-radius: 24px;
+    }
+
+    &__item-img {
+        width: 192px;
+        height: 192px;
+        border-radius: 50%;
+        background-color: $beige-bg;
+        align-self: center;
+        order: -1;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .instruction {
+        &__item {
+            &--bg-parrot::before {
+                background-image: url(../img/instruction-parrot@2x.png);
+                background-size: 100%;
+            }
+    
+            &--bg-bunny::before {
+                background-image: url(../img/instruction-bunny@2x.png);
+                background-size: 100%;
+            }
+    
+            &--bg-dog::before {
+                background-image: url(../img/instruction-dog@2x.png);
+                background-size: 100%;
+            }
+        }
+    }
+}
+ 
+@media (max-width: 991px) {
+    .instruction {
+        &__box {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        &__item-outer {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .instruction {
+        &__box {
+            margin: 0;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 33px;
+            margin-bottom: 30px;
+        }
+
+        &__item-outer {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__item-img {
+            margin-bottom: 20px;
+        }
+
+        &__item-title {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        &__item-info {
+            font-size: 14px;
+            line-height: 20px;
+            max-width: 380px;
+            align-self: center;
+        }
+
+        &__button {
+            margin-top: 20px;
+        }
+    }
+}

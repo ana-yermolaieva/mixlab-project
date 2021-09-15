@@ -1,0 +1,130 @@
+.skills {
+    &__box {
+        display: flex;
+        margin: 0 -16px;
+    }
+
+    &__title-box,
+    &__item-box {
+        width: 50%;
+        padding: 0 16px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 53px;
+        color: $black;
+        max-width: 527px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        width: 280px;
+    }
+
+    &__title-box-inner,
+    &__item-box-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title-box-inner {
+        align-items: center;
+    }
+
+    &__item-box-inner {
+        align-items: flex-end;
+    }
+
+    &__item {
+        max-width: 466px;
+        padding-bottom: 30px;
+        margin-bottom: 32px;
+    }
+    
+    &__item:not(:last-child) {
+        border-bottom: 1px solid $orange-line;
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $purple;
+        margin-bottom: 16px;
+    }
+
+    &__item-info {
+        font-size: 16px;
+        line-height: 23px;
+        color: $black;
+        padding-bottom: 4px;
+    }
+}
+
+@media (max-width: 991px) {
+    .skills {
+        &__box {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title-box,
+        &__item-box {
+            width: 100%;
+        }
+
+        &__title-box {
+            margin-bottom: 20px;
+        }
+
+        &__title-box-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }        
+
+        &__title {
+            max-width: 100%;
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        &__img {
+            margin: 0 auto;
+        }
+
+        &__item-box-inner {
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .skills {
+        &__title {
+            font-size: 28px;
+            line-height: 36px;
+            padding: 0;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__item {
+            padding-bottom: 25px;
+        }
+
+        &__item-title {
+            font-size: 22px;
+            line-height: 20px;
+        }
+
+        &__item-info {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

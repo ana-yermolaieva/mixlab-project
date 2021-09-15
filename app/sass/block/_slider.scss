@@ -1,0 +1,99 @@
+.slider {
+    &__item {
+        background-color: $wave;
+        border-radius: 20px;
+        padding: 30px 40px;
+        margin: 0 40px;
+    }
+
+    &__item-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        display: block;
+        border-radius: 50%;
+        margin-right: 40px;
+    }
+
+    &__info-text {
+        font-size: 16px;
+        line-height: 26px;
+        color: $black;
+        padding-bottom: 10px;
+    }
+
+    &__reviewer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__reviewer-inst {
+        width: 22px;
+        height: 22px;
+        margin-right: 16px;
+        background-image: url(../img/insta-icon.png);
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__reviewer-name {
+        font-size: 20px;
+        line-height: 33px;
+        color: $black;
+    }
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .slider {
+        &__reviewer-inst {
+            background-image: url(../img/insta-icon@2x.png);
+            background-size: 22px 22px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .slider {
+        &__item-box {
+            flex-direction: column;
+        }
+
+        &__img {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        &__info-text {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+        &__reviewer {
+            justify-content: flex-end
+        }
+
+        &__reviewer-name {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        &__reviewer-inst {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.logo {
+    &:hover {
+        opacity: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        &:hover {
+            opacity: 100%;
+        }
+    }
+}
